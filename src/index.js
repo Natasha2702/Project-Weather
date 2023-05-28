@@ -1,23 +1,9 @@
-function handleBackground(hour) {
-  const bodyElement = document.body;
-
-  if (hour >= 6 && hour < 18) {
-    bodyElement.classList.remove("night");
-    bodyElement.classList.add("day");
-  } else {
-    bodyElement.classList.remove("day");
-    bodyElement.classList.add("night");
-  }
-}
-
 function formatDate(timestamp, dayRequest) {
   let date = new Date(timestamp);
   let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-
-  handleBackground(hour);
 
   let minutes = date.getMinutes();
   if (minutes < 10) {
@@ -104,3 +90,15 @@ formElement.addEventListener("submit", handleSubmit);
 function navigatorPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+
+search("Kirkney");
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
