@@ -1,0 +1,139 @@
+body {
+  font-family: "Playfair Display", serif;
+}
+
+.data {
+  display: block;
+  margin: 10px auto;
+  max-width: 500px;
+  background-color: #ffffffac;
+  padding: 20px;
+  border: #d9d9d9 solid;
+  background-image: url("images/day.jpg");
+  border-radius: 20px;
+}
+
+/* Search engine */
+
+.search-form-col {
+  padding: 5px;
+  height: 60px;
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(233, 216, 233);
+  border: none;
+  border-radius: 13px;
+  text-align: center;
+}
+
+.form-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+/* Local data */
+
+.local-data {
+  width: 100%;
+  height: 100px;
+  margin: 40px 0 0 0;
+  padding: 12px;
+}
+
+.selected-city {
+  font-size: 30px;
+}
+
+.date-time,
+.description {
+  font-size: 16px;
+}
+
+/* weather data */
+.weather {
+  width: 100%;
+  height: 80px;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.current-temperature {
+  font-size: 64px;
+}
+
+.current-temperature-icon {
+  font-size: 40px;
+  position: relative;
+  top: -15px;
+}
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -30px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  justify-content: center;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.active {
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+}
+
+/* forecast */
+
+.weather-forecast {
+  margin-top: 50px;
+}
+
+.forecast-col {
+  margin: 2px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 15px;
+  border-style: groove;
+}
+
+.forecast-day {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.forecast-temperature {
+  text-align: center;
+  font-size: 12px;
+}
+
+.forecast-icon {
+  display: block;
+  width: 36px;
+  margin: 0 auto;
+}
+
+.night .programmer {
+  position: relative;
+  bottom: 15vh;
+  text-align: left;
+  color: #fff;
+}
+
+.day .programmer {
+  position: relative;
+  bottom: 15vh;
+  text-align: left;
+  color: #000;
+}
