@@ -35,6 +35,42 @@ function setForecastDate(timestamp) {
   return days[day];
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let weatherForecast = response.data.daily;
+
+  weatherForecast.forEach(function (dailyForecast, index) {
+    let day = setForecastDate(dailyForecast.time);
+
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col forecast-col">
+            <div class="forecast-day" id="forecast-day-1">
+            ${day}
+            </div>
+            <img 
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+              dailyForecast.condition.icon
+            }.png" alt="${
+          dailyForecast.condition.description
+        }" class="forecast-icon" id="forecast-temperature-icon-1">
+            <div class="forecast-temperature"> 
+            <span>${Math.round(dailyForecast.temperature.minimum)}°</span>
+             | 
+             <span>${Math.round(dailyForecast.temperature.maximum)}°</span>
+            </div>
+      </div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function getForecast(coordinates) {
   let API_Key = "54cefcbff0e09o4f7ce00e50385cdat1";
   let API_Url = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${API_Key}&units=metric`;
