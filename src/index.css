@@ -6,12 +6,14 @@ body {
   background-image: url("../images/day.jpg");
   background-size: 500px;
   display: block;
+  margin: 10px auto;
 }
 
 .night {
   background-image: url("../images/Night.jpg");
   background-size: 500px;
   display: block;
+  margin: 10px auto;
 }
 
 .data {
