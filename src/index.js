@@ -1,9 +1,23 @@
+function handleBackground(hour) {
+  const bodyElement = document.body;
+
+  if (hour >= 6 && hour < 18) {
+    bodyElement.classList.remove("night");
+    bodyElement.classList.add("day");
+  } else {
+    bodyElement.classList.remove("day");
+    bodyElement.classList.add("night");
+  }
+}
+
 function formatDate(timestamp, dayRequest) {
   let date = new Date(timestamp);
   let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
+
+  handleBackground(hour);
 
   let minutes = date.getMinutes();
   if (minutes < 10) {
