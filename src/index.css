@@ -10,7 +10,7 @@ body {
 
 .night {
   background-image: url("../images/Night.jpg");
-  display: block;
+  width: 50%;
   margin: 10px auto;
 }
 
