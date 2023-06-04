@@ -8,6 +8,7 @@ body {
 
 .night {
   background-image: url("../images/Night.jpg");
+  background-position: center;
 }
 
 .data {
