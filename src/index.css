@@ -4,11 +4,12 @@ body {
 
 .day {
   background-image: url("../images/day.jpg");
+  background-size: cover;
 }
 
 .night {
   background-image: url("../images/Night.jpg");
-  background-position: 100%;
+  background-size: cover;
 }
 
 .data {
