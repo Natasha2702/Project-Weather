@@ -4,16 +4,12 @@ body {
 
 .day {
   background-image: url("../images/day.jpg");
-  display: block;
-  max-width: 500px;
-  border-radius: 20px;
+  background-size: 500px;
 }
 
 .night {
   background-image: url("../images/Night.jpg");
-  display: block;
-  max-width: 500px;
-  border-radius: 20px;
+  background-size: 500px;
 }
 
 .data {
