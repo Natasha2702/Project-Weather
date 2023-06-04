@@ -2,6 +2,14 @@ body {
   font-family: "Playfair Display", serif;
 }
 
+.day {
+  background-image: "images/day.jpg";
+}
+
+.night {
+  background-image: "images/night.jpg";
+}
+
 .data {
   display: block;
   margin: 10px auto;
@@ -9,7 +17,6 @@ body {
   background-color: #ffffffac;
   padding: 20px;
   border: #d9d9d9 solid;
-  background-image: url("images/day.jpg");
   border-radius: 20px;
 }
 
