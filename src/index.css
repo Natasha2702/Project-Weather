@@ -3,11 +3,11 @@ body {
 }
 
 .day {
-  background-image: "images/day.jpg";
+  background-image: url("../images/day.jpg");
 }
 
 .night {
-  background-image: "images/night.jpg";
+  background-image: url("../images/Night.jpg");
 }
 
 .data {
