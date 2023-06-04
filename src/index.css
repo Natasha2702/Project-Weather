@@ -5,11 +5,13 @@ body {
 .day {
   background-image: url("../images/day.jpg");
   background-size: 500px;
+  display: block;
 }
 
 .night {
   background-image: url("../images/Night.jpg");
   background-size: 500px;
+  display: block;
 }
 
 .data {
