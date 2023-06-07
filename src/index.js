@@ -106,7 +106,7 @@ function displayTemperature(response) {
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
-  temperatureElement.innerHTML = celsiusTemperature;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
@@ -141,14 +141,28 @@ function navigatorPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-search("Kirkney");
-
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemp);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
+}
+let celsiusTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+search("Kirkney");
