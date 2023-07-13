@@ -2,19 +2,25 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-.day {
+body.day {
   background-image: url("../images/day.jpg");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-size: 400px 500px auto;
 }
 
 .night {
   background-image: url("../images/Night.jpg");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-size: 400px 500px auto;
 }
 
 .data {
   display: block;
-  margin: 10px auto;
+  margin: 50px auto;
   max-width: 500px;
   background-color: transparent;
   padding: 20px;
