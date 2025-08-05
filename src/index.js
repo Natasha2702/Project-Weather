@@ -155,7 +155,7 @@ function displayCelsiusTemp(event) {
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(celsiusTemperature);
   fahrenheitLink.classList.remove("active");
-  celciusLink.classList.add("active");
+  celsiusLink.classList.add("active");
 }
 let celsiusTemperature = null;
 
