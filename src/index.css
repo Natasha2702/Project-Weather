@@ -1,13 +1,14 @@
 body {
   font-family: "Playfair Display", serif;
 }
-
 body.day {
   background-image: url("../images/light.jpg");
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  background-size: 400px 500px auto;
+  background-size: 500px 520px;
+  border-radius: 20px;
+  
 }
 
 .night {
@@ -16,6 +17,7 @@ body.day {
   background-position: center;
   display: block;
   background-size: 500px 530px;
+
 }
 
 .data {
